@@ -12,7 +12,6 @@ async def lifespan(app: FastAPI):
     print("Create tables")
     yield
     print("Turn off")
-    print("Bye)")
 
 
 app = FastAPI(lifespan=lifespan)
