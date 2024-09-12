@@ -1,6 +1,6 @@
 from sqlalchemy import select
 
-from database import new_session, TaskOrm
+from test_app.database import new_session, TaskOrm
 from schemas import STaskAdd, STask
 
 
