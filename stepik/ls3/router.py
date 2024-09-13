@@ -49,5 +49,5 @@ def get_product():
 
 @router.get("/products/search", response_model=List[ProductResponse])
 def search_product(keyword: str, category: Union[str, None] = None, limit: Union[int, None] = None):
-    return [product for product in sample_products if product.get("product_id") == keyword \
-            and (product.get("category") is None or product.get("product_id") == category)][:limit + 1]
+    return [product for product in sample_products if product.get("name") == keyword \
+            and (product.get("category") is None or product.get("category") == category)][:limit + 1]
