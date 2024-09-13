@@ -21,4 +21,4 @@ def get_users(limit: int):
 @router.post("/feedback")
 def post_feedback(feed: Feedback):
     fake_feedback.append(feed)
-    return {"message": "Feedback received. Thank you, Alice!"}
+    return {"message": f"Feedback received. Thank you, {feed.name}!"}
